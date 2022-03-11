@@ -3,7 +3,7 @@ const compression = require('compression');
 const cors = require('cors');
 const bodyparser = require('body-parser');
 const helmet = require('helmet');
-const routs = require('./Routs/Routs');
+const routs = require('./Routs/routs.js');
 const dotenv = require('dotenv');
 dotenv.config();
 
