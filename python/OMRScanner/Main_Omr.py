@@ -1,6 +1,6 @@
 #from importlib.resources import path
 from traceback import print_tb
-import cv2
+import cv2 
 from cv2 import THRESH_BINARY_INV
 import numpy as np
 import Utils
