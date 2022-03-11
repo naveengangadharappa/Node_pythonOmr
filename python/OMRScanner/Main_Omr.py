@@ -66,7 +66,7 @@ def getResult():
     }
     return json.dumps(JsonRes)
    
-print("Final Grade",getResult())        
+print(getResult())        
 
 
 

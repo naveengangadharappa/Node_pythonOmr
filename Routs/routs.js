@@ -55,13 +55,14 @@ router.post('/Compute_omr',(req,res)=>{
             let options = {
                 mode: 'text',
                 pythonOptions: ['-u'],  // get print results in real-time
-                scriptPath: 'python/OMR Scanner',   //'python/OMR_Raju/OMR-Scanner-main',//'python/OMR Scanner', //If you are having python_test.py script in same folder, then it's optional.
+                scriptPath: 'python/OMRScanner',   //'python/OMR_Raju/OMR-Scanner-main',//'python/OMR Scanner', //If you are having python_test.py script in same folder, then it's optional.
                 args: [req.body.filename]   //['naveen g'] //An argument which can be accessed in the script using sys.argv[1]
             };
         
             PythonShell.run('Main_Omr.py', options, (err, result)=>{ 
                 if (err) {
-                    res.jsonp({status:false,message:"Error in Processing Omr Please upload file and proceed for omr computation"});
+                    console.log(err);
+                    res.json({status:false,message:"Error in Processing Omr Please upload file and proceed for omr computation"});
                     //throw err;   
                 } else res.json({status:true,data:result,message:"Omr Processing Successfull"});
             });
