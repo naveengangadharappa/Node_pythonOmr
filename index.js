@@ -30,12 +30,12 @@ app.use(compression({
 
 app.use(helmet());
 
-app.use(cors({
-    origin: ['http://localhost:3000',],//your front url,
-    methods: ['GET', 'POST'],
-    credentials: true,
-    exposedHeaders: ['set-cookie']
-}))
+// app.use(cors({
+//     origin: ['http://localhost:3000',],//your front url,
+//     methods: ['GET', 'POST'],
+//     credentials: true,
+//     exposedHeaders: ['set-cookie']
+// }))
 
 // app.use((err, req, res, next) => {   //middle ware to handle Error 
 //     handleError(err, res);
