@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test",
-    "start": "node index"
+    "start": "nodemon index",
+    "postinstall" : "cd python/OMRScanner && pip3 install opencv numpy"
   },
   "author": "naveen g",
   "license": "ISC",
